@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>رسالة سرية لأغلي حد في عمري ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+}
+
+/* خلفية النجوم */
+#bg{
+position:fixed;
+width:100%;
+height:100%;
+background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+overflow:hidden;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:0.8;
+animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:0.2;}
+50%{opacity:1;}
+}
+
+/* باقي التصميم */
+#lock{
+margin-top:150px;
+}
+
+input{
+padding:10px;
+border-radius:10px;
+border:none;
+}
+
+button{
+margin-top:10px;
+padding:10px 20px;
+border:none;
+border-radius:10px;
+background:#ff4d6d;
+color:white;
+}
+
+#content{
+display:none;
+margin-top:100px;
+font-size:18px;
+}
+
+.heart{
+position:absolute;
+bottom:0;
+font-size:25px;
+animation: fly 5s linear infinite;
+}
+
+@keyframes fly{
+0%{transform:translateY(0); opacity:1;}
+100%{transform:translateY(-800px); opacity:0;}
+}
+</style>
+
+<script>
+function checkPassword(){
+var pass = document.getElementById("password").value;
+if(pass == "dodo294"){
+document.getElementById("lock").style.display="none";
+document.getElementById("content").style.display="block";
+document.getElementById("music").play();
+typeMessage();
+setInterval(makeHeart, 500);
+}else{
+alert(" الباسورد غلط.. حاول تاني يا حبيبي😉");
+}
+}
+
+// كتابة الرسالة حرف حرف
+var i = 0;
+var text = "  ازيك يا دعاء؟ السايت ده عملته علشانك، علشان اقول لك انك أغلي حد عندي، ٤سنين عدوا وانا جنبك عمري ما فكرت أيعد عنك.. مش ضعف مني، 
+لكن لأني دايماً شايفك مسؤولة مني، بنتي وأمي وصحبتي وحبيبتي وكل حاجة عندي.. اميرتي كمان ومش هبقي ببالغ، انا زعلي منك مايتوصفش، بحسك دايما بتعاملي كل الناس أحسن مني وظه واجعني لأني بحاول علشانك بكل اللي اقدر عليه، واجعني بُعدك زي ما واجعني خوفي عليكي اللي مش بتقدريه
+لكن كل ده يهون علشان غلاوتك..🫂
+خايف نخسر بعض تاني.. خايف تضيعي 🤦‍♂️
+عمري ما شفت حد وصل لدرجة المحبة دي، حد بيصلي صلاة لنفسه وصلاة علشان حد تاني
+حد كل تفكيره هو شخص مش حاسس بيه
+خايف تضيعي بعدي ومايبقاش جنبك اللي يفهمك ويقدرك زيي💔
+وبخافف اكتر ابين حنيتي عليكي واقول لك كلام حلو لتزعلي مني رغم اني بظهر لك ده بالاهتماموالدعم
+كنتي دايماً مستغربة لما اقول لك حاجة وتحصل واحذرك من حاجات وتلاقيها حصلت
+بحبك يا دعاء يا أغلي حاجة في دنيتي وهفضل جنبك لأخر عمرك لحد ما نعجز حتي الدنيا كلها وقفت ضدنا، انا جنبك❤️
+وده مش حب زي بتاع الناس العادية ده لسبب او لغرض، ده حاجة اسمي وانقي، حب غير دنيوي للروح قبل ما يكون للشخص
+انا جنبك يا جعفور ومش هتخلي عنك أبداً😂❤️
+ومش هخاف تاني ابين لك ده 
+وعد مني اكون لك العمر كله 
+كلميني انا مستنيكي وعاوز ابدا معاكي عهد جديد بجد
+اتمني ما تسيبنيش زعلان ونلحق بعض ونتعاتب يا شريكة مشواري وعالمي اللي محدش منه غيرنا
+زي ما انا عمري ما سيبتك زعلانة حتي لو مش بسببي";
+
+
+function typeMessage(){
+if(i < text.length){
+document.getElementById("msg").innerHTML += text.charAt(i);
+i++;
+setTimeout(typeMessage, 80);
+}
+}
+
+// القلوب
+function makeHeart(){
+var heart = document.createElement("div");
+heart.innerHTML = "❤️";
+heart.className = "heart";
+heart.style.left = Math.random()*100 + "vw";
+document.body.appendChild(heart);
+
+setTimeout(function(){
+heart.remove();
+}, 5000);
+}
+
+// صنع نجوم الخلفية
+window.onload = function(){
+for(let i=0;i<80;i++){
+let s = document.createElement("div");
+s.className = "star";
+s.style.width = Math.random()*3 + "px";
+s.style.height = s.style.width;
+s.style.left = Math.random()*100 + "vw";
+s.style.top = Math.random()*100 + "vh";
+s.style.animationDelay = Math.random()*3 + "s";
+document.getElementById("bg").appendChild(s);
+}
+}
+</script>
+</head>
+
+<body>
+
+<div id="bg"></div>
+
+<audio id="music" loop>
+<source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_9c9f9c0e2b.mp3?filename=romantic-piano-11036.mp3" type="audio/mpeg">
+</audio>
+
+<div id="lock">
+<h2>اكتبي الباسورد 🔐</h2>
+<input type="password" id="password">
+<br>
+<button onclick="checkPassword()">افتح الرسالة</button>
+</div>
+
+<div id="content">
+<h1>رسالة من قلبي 💙</h1>
+<p id="msg"></p>
+</div>
+
+</body>
+</html>
